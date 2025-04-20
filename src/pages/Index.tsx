@@ -1,12 +1,48 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useEffect } from "react";
+import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+import EnglishInterviewSection from "@/components/EnglishInterviewSection";
+import CaseExamplesSection from "@/components/CaseExamplesSection";
+import ReviewsSection from "@/components/ReviewsSection";
+import ExpertsSection from "@/components/ExpertsSection";
+import TariffsSection from "@/components/TariffsSection";
+import FAQSection from "@/components/FAQSection";
+import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
+import AnimatedScroll from "@/components/AnimatedScroll";
 
 const Index = () => {
+  // Set page metadata
+  useEffect(() => {
+    document.title = "Продуктовый кейс-клуб Product Games";
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content",
+        "Продуктовый кейс-клуб для развития насмотренности, карьерного роста и подготовки к собеседованиям. Кейсы из известных компаний, обсуждение с экспертами."
+      );
+    }
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Header />
+      <HeroSection />
+      <AboutSection />
+      <EnglishInterviewSection />
+      <CaseExamplesSection />
+      <ReviewsSection />
+      <ExpertsSection />
+      <TariffsSection />
+      <FAQSection />
+      <ContactSection />
+      <Footer />
+      <ScrollToTop />
+      <AnimatedScroll />
     </div>
   );
 };
