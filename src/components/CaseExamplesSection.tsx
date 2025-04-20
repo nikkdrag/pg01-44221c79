@@ -59,7 +59,7 @@ const CaseExamplesSection = () => {
             </div>
             <div className="p-6">
               <h3 className="text-xl font-bold mb-3">{caseItem.title}</h3>
-              <p className="text-gray-700 line-clamp-4 mb-4">{caseItem.question}</p>
+              <p className="text-gray-700 mb-4 whitespace-pre-line">{caseItem.question}</p>
               <button 
                 className="text-purple font-medium hover:text-purple-light transition-colors"
                 onClick={() => setOpenCase(caseItem)}
